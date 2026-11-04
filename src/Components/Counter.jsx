@@ -11,7 +11,8 @@ function Counter() {
   const amount=inputRef.current.value
   if(amount)
   {
-     dispatch(incrementByAmount(Number(amount)))
+     dispatch(incrementByAmount(+(amount)))
+     inputRef.current.value=""
   }
   else
   {
